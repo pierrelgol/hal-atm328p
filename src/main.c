@@ -32,9 +32,9 @@ bool is_button_pressed(const GpioPin *button_pin) {
 }
 
 int main(void) {
-        gpio_init(&led1, GPIO_PORTB, 0);
-        gpio_init(&led2, GPIO_PORTB, 1);
-        gpio_init(&button, GPIO_PORTD, 2);
+        gpio_init(&led1, GPIO_PORTD, PIND3);
+        gpio_init(&led2, GPIO_PORTD, PIND5);
+        gpio_init(&button, GPIO_PORTD, PIND2);
 
         gpio_set_output(&led1);
         gpio_set_output(&led2);
